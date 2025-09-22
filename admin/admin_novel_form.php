@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Đã cập nhật truyện!');window.location='admin_novels.php';</script>";
         exit();
     } else {
-        // Thêm truyện mới
+        // Thêm truyện mớii
         $admin_id = $_SESSION['user_id'];
         $stmt = $conn->prepare("INSERT INTO novels (title, description, cover, category_id, created_by, approval) VALUES (?, ?, ?, ?, ?, 'approved')");
         $stmt->bind_param("sssii", $title, $desc, $cover_upload, $category_id, $admin_id);
