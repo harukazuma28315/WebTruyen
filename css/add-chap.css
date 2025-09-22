@@ -1,0 +1,71 @@
+body {
+	font-family: Arial;
+	padding: 30px;
+	background: #f5f5f5;
+}
+.tabs {
+	display: flex;
+	margin-bottom: 20px;
+}
+.tab-btn {
+	padding: 12px 20px;
+	background: #ddd;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+	margin-right: 5px;
+}
+.tab-btn.active {
+	background: #2980b9;
+	color: white;
+}
+.tab-content {
+	display: none;
+	background: white;
+	padding: 20px;
+	border-radius: 0 5px 5px 5px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.tab-content.active {
+	display: block;
+}
+
+.btn {
+	padding: 6px 12px;
+	text-decoration: none;
+	background: #3498db;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.btn-danger {
+	background: #e74c3c;
+}
+.btn-warning {
+	background: #f39c12;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+th,
+td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+th {
+	background: #eee;
+}
+
+input,
+select,
+textarea {
+	padding: 8px;
+	width: 100%;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}

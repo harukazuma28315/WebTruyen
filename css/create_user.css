@@ -1,0 +1,29 @@
+.dropdown {
+	position: relative;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 0%;
+	left: 105%; /* hoặc 105% hoặc 100% tuỳ bạn muốn nó cách xa sidebar bao nhiêu */
+	min-width: 160px;
+	background: #1e272e;
+	border-radius: 10px;
+	box-shadow: 0 4px 24px #0002;
+	padding: 10px 0;
+	z-index: 999;
+	display: none;
+}
+.dropdown.open .dropdown-menu {
+	display: block;
+}
+.dropdown-menu a {
+	display: block;
+	padding: 10px 20px;
+	color: #222a4c;
+	text-decoration: none;
+	transition: background 0.15s;
+}
+.dropdown-menu a:hover {
+	background: #f1f5fd;
+}

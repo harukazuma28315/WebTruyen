@@ -1,0 +1,438 @@
+/* ----- Cấu hình chung cho toàn trang ----- */
+body {
+	margin: auto; /* Căn giữa nội dung theo chiều ngang */
+	padding: 0; /* Khoảng cách lề trong */
+	height: auto; /* Chiều cao tự động */
+}
+
+/* ----- Trang thongtin.php: chi tiết truyện ----- */
+.gggg {
+	position: fixed;
+	width: 100%;
+	padding: 30px 0px 0px 0px;
+	background: rgb(153, 155, 155);
+	font-size: 18px;
+	box-sizing: border-box;
+	display: flex;
+	z-index: 999;
+	gap: 8px; /* Tạo khoảng cách giữa các phần tử */
+}
+
+.gggg a {
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
+.ggggtentruyen {
+	font-size: 20px;
+}
+/* Hiệu ứng hover cho các liên kết trong thanh điều hướng */
+.gggg a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	margin-bottom: 0; /* Không có khoảng cách dưới tiêu đề */
+}
+
+.khungtruyen {
+	display: flex; /* Hiển thị ảnh và thông tin song song */
+	margin-top: 100px;
+	position: relative;
+}
+
+.thongtin {
+	font-size: 22px;
+	margin-left: 20px; /* Cách ảnh truyện một khoảng */
+}
+.theloai a {
+	text-decoration: none;
+	color: black;
+	margin-right: 5px;
+}
+
+.theloai a:hover {
+	text-decoration: underline;
+}
+
+/* Nút "ĐỌC TỪ ĐẦU", "ĐỌC CHAP MỚI NHẤT" */
+.nut {
+	padding: 10px 15px;
+	background: #4444ee; /* Màu nền xanh dương */
+	color: white;
+	border: none;
+	margin-right: 20px;
+	font-size: 18px;
+	text-decoration: none;
+	border-radius: 15px; /* Bo tròn nút */
+	cursor: pointer; /* con trỏ dạng bàn tay khi hover */
+}
+
+/* Hiệu ứng hover cho nút */
+.nut:hover {
+	background: #2222aa; /* Màu nền khi rê chuột */
+}
+
+/* Hiệu ứng hover cho nút */
+.tomtat {
+	font-size: 16px;
+	margin-top: 30px; /* Cách phần trên một khoảng */
+}
+
+/* ----- Mục lục chương truyện ----- */
+.chap {
+	display: flex; /* Hiển thị 2 cột */
+	gap: 40px;
+	margin-top: 10px;
+}
+
+/* Cột: danh sách chương truyện */
+.cot {
+	flex: 1; /* Mỗi cột chiếm 50% */
+}
+
+/* Nút chọn chương truyện */
+.item-chap {
+	all: unset; /* Reset toàn bộ CSS mặc định */
+	display: block;
+	width: 100%;
+	background: #f4f4f4; /* Nền xám nhạt */
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 12px 10px;
+	margin-left: -10px; /* Căn trái với lề của cột */
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+	transition: all 0.2s ease-in-out; /* Hiệu ứng mượt khi hover */
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	color: #222; /* Màu chữ */
+}
+
+/* Hiệu ứng hover cho nút chọn chương */
+.item-chap:hover {
+	background: #dfefff; /* Màu nền khi hover */
+	transform: scale(1.02); /* Phóng to nhẹ */
+}
+
+/* Link chương trong mục lục (nếu dùng thẻ <a> thay vì <button>) */
+.chap-link {
+	text-decoration: none; /* Không gạch chân */
+	color: #222; /* Màu chữ */
+	font-weight: bold; /* In đậm chữ */
+}
+.wrapper {
+	max-width: 1500px;
+	margin: auto;
+	padding: 30px;
+}
+
+/* Thông tin truyện */
+.book-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%; /* Kéo đều phần chữ bằng chiều cao khối */
+}
+/* Tiêu đề truyện */
+.book-info h3 {
+	margin: 0;
+	font-size: 16px;
+	color: #222;
+	line-height: 1.3;
+	white-space: nowrap; /* Không cho xuống dòng */
+	overflow: hidden; /* Ẩn phần tràn */
+	text-overflow: ellipsis; /* Thêm dấu ... */
+	max-width: 100%; /* Đảm bảo không bị tràn ra ngoài */
+}
+/* Thông tin tác giả và thể loại */
+.book-info span {
+	color: #888;
+	margin-right: 5px;
+}
+.book-info p {
+	margin: 4px 0;
+
+	color: #444;
+}
+/**/
+
+/* css truyện đề cử  */
+.product-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.tac {
+	width: 115px;
+	transition: transform 0.2s;
+}
+
+.tac a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.tac:hover {
+	transform: scale(1.05);
+	border-radius: 10px;
+}
+
+.tac img {
+	width: 105px;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+/* ranking-title */
+.ranking-title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/* ===== Main Container ===== */
+.main {
+	display: flex;
+	gap: 10px;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	max-height: 720px;
+	width: 100%;
+	max-width: 1200px;
+	transition: max-height 0.5s ease;
+}
+.main.expanded {
+	max-height: 3000px; /* Tăng chiều cao khi mở rộng */
+}
+
+/* ===== Sidebar List ===== */
+.sidebar {
+	width: 400px;
+}
+.sidebar-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	align-items: stretch;
+	padding-left: 2px;
+	margin: 10px;
+}
+.sidebar-list li {
+	width: 370px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ===== Truyện Item ===== */
+.box-truyen {
+	background-color: #c5c5c5;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	padding: 10px;
+	width: 100%;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 110px;
+}
+
+.box-truyen:hover {
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box-truyen a {
+	display: flex;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+}
+
+/* ===== Bên trong Truyện Item ===== */
+.truyen-wrapper {
+	display: flex;
+	gap: 12px;
+}
+.cover-img,
+.box-truyen img {
+	width: 58px;
+	height: 74px;
+	object-fit: cover;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+.info-truyen {
+	row-gap: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ===== Text Styling ===== */
+.title-ranking {
+	font-family: "Archivo", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 250px;
+}
+.genre-ranking {
+	flex-wrap: wrap;
+	font-family: "Archivo", sans-serif;
+	font-size: 12px;
+}
+.rating {
+	font-family: "Archivo", sans-serif;
+	font-size: 12px;
+	color: #e67e22;
+
+	margin: 0px 0px 0px 2px;
+}
+/* ===== Hiển thị theo số lượng ===== */
+.main .sidebar-list .box-truyen {
+	display: none;
+}
+.main .sidebar-list .box-truyen:nth-child(-n + 3) {
+	display: block;
+}
+.main.expanded .sidebar-list .box-truyen:nth-child(-n + 10) {
+	display: block;
+}
+
+/* ===== Main1 Container ===== */
+.main1 {
+	display: flex;
+	gap: 0px;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	max-height: 800px;
+	width: 100%;
+	max-width: 1200px;
+	transition: max-height 0.5s ease;
+}
+.main1.expanded {
+	max-height: 3000px; /* Tăng chiều cao khi mở rộng */
+}
+.main1 ul {
+	list-style: none;
+	padding-left: 60px; /* đưa khung qua phải */
+	padding-right: 20px;
+	margin: 0;
+}
+
+.novelsection {
+	width: 400px;
+	flex: 1; /* Mỗi section chiếm 50% */
+	display: flex;
+	flex-direction: column;
+}
+.listnew {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	align-items: center;
+	padding-left: 2px;
+	margin: 10px;
+}
+.listnew li {
+	width: 370px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ===== Truyện Item ===== */
+.novelitem {
+	background-color: #c5c5c5;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	width: 88%;
+	transition: box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 120px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-bottom: 15px;
+}
+.novelitem:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.novelitem a {
+	display: flex;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+}
+
+/* ===== Bên trong Truyện Item ===== */
+.otruyen {
+	display: flex;
+	gap: 12px;
+}
+.cover-img,
+.novelitem img {
+	width: 80px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 4px;
+	flex-shrink: 0;
+}
+.info-truyen {
+	row-gap: 5px;
+	display: flex;
+	flex-direction: column;
+	max-width: 340px; /* kích thước chữ trong khung */
+}
+
+/* ===== Text Styling ===== */
+.titletruyen {
+	font-family: "Archivo", sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 450px;
+}
+.tltruyen {
+	flex-wrap: wrap;
+	font-size: 18px;
+}
+.rating {
+	font-size: 15px;
+	color: #e67e22;
+	font-weight: bold;
+}
+/* ===== Hiển thị theo số lượng ===== */
+.main1 .listnew .otruyen {
+	display: none;
+}
+.main1 .listnew .otruyen:nth-child(-n + 4) {
+	display: block;
+}
+.main1.expanded .listnew .otruyen:nth-child(-n + 10) {
+	display: block;
+}
+.updatetitle {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+}

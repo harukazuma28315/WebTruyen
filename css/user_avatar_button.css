@@ -1,0 +1,67 @@
+.user-menu-wrapper {
+	position: relative;
+	display: inline-block;
+}
+.user-avatar-btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-right: 0px;
+	background: linear-gradient(135deg, #10e7ff 0%, #3f87ff 100%);
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(63, 135, 255, 0.2);
+	border: 2px solid #e6f7ff;
+	overflow: hidden;
+	cursor: pointer;
+}
+.user-avatar-btn img {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+}
+.user-dropdown {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 48px;
+	max-width: 150px;
+	background: #23223a;
+	color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+	z-index: 10000;
+	padding-top: 10px;
+	font-size: 15px;
+	transition: 0.2s;
+}
+.user-menu-wrapper.show .user-dropdown {
+	display: block;
+}
+.user-dropdown a,
+.user-dropdown button {
+	display: block;
+	width: 130px;
+	background: none;
+	border: none;
+	color: inherit;
+	text-align: left;
+	padding: 10px 0px 10px 20px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 15px;
+	transition: background 0.18s;
+}
+.user-dropdown a:hover,
+.user-dropdown button:hover {
+	background: #353252;
+	border-radius: 10px;
+}
+.user-dropdown .user-name {
+	font-weight: bold;
+	color: #ffe23a;
+	padding-bottom: 6px;
+	padding-left: 22px;
+	font-size: 16px;
+}

@@ -1,0 +1,79 @@
+/* ----- Cấu hình chung cho toàn trang ----- */
+body {
+	max-width: 900px; /* Giới hạn chiều rộng nội dung */
+	margin: auto; /* Căn giữa nội dung theo chiều ngang */
+	padding: 20px; /* Khoảng cách lề trong */
+	font-family: Arial; /* Font chữ */
+}
+
+img {
+	border: 1px solid #ccc; /* Viền nhẹ màu xám cho tất cả hình ảnh */
+}
+
+/* css cho trang chap */
+body {
+	font-family: Arial;
+	max-width: 700px;
+	margin: auto;
+	padding: 100px 30px 30px 30px;
+	line-height: 1.6;
+}
+.chapter-nav {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ffffffee;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 8px 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.nav-btn {
+	background: #007bff;
+	color: white;
+	text-decoration: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 16px;
+	transition: background 0.2s;
+}
+
+.nav-btn:hover {
+	background: #0056b3;
+}
+
+.chapter-number {
+	font-weight: bold;
+	font-size: 16px;
+	padding: 6px 30px;
+	border: 1px solid #ccc;
+	background: #f0f0f0;
+	border-radius: 6px;
+	user-select: none;
+}
+
+.back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #007bff;
+	color: white;
+	padding: 12px 15px;
+	font-size: 20px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	text-decoration: none;
+	z-index: 999;
+	border-radius: 10px;
+}
+
+.back-to-top:hover {
+	background: #0056b3;
+}

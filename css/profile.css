@@ -1,0 +1,353 @@
+/* Giao diện tổng thể */
+body {
+	font-family: "Segoe UI", sans-serif;
+	background: #f3f4f6;
+	margin: 0;
+	padding: 20px;
+}
+
+.container {
+	max-width: 960px;
+	margin: auto;
+	background: #fff;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #1f2937;
+}
+
+/* Header avatar + info */
+.header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.avatar {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #4f46e5;
+	box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.avatar:hover {
+	transform: scale(1.08) rotate(1deg);
+	box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+	border-color: #6366f1;
+}
+
+.info p {
+	margin: 6px 0;
+	color: #374151;
+	font-size: 15px;
+}
+
+/* Link admin */
+.admin-link {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 6px 12px;
+	color: #fff;
+	background: linear-gradient(to right, #ec4899, #f43f5e);
+	font-weight: bold;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+
+.admin-link:hover {
+	background: linear-gradient(to right, #f43f5e, #be185d);
+	box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+}
+
+/* Stats */
+.stats {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+/* Nút bấm + Link hành động */
+.actions a,
+button {
+	display: inline-block;
+	padding: 10px 18px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #0c4a6e;
+
+	border: none;
+	border-radius: 8px;
+	margin: 5px 12px 5px 12px;
+	text-decoration: none;
+	cursor: pointer;
+
+	box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2),
+		0 4px 12px rgba(56, 189, 248, 0.3), 0 0 12px rgba(56, 189, 248, 0.25);
+	transition: all 0.3s ease;
+}
+
+.actions a:hover,
+button:hover {
+	transform: scale(1.06);
+	background: linear-gradient(135deg, #7dd3fc, #0ea5e9);
+	box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3),
+		0 6px 18px rgba(14, 165, 233, 0.4), 0 0 18px rgba(14, 165, 233, 0.45);
+}
+
+.actions a:active,
+button:active {
+	transform: scale(0.97);
+	box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.25),
+		0 2px 6px rgba(14, 165, 233, 0.3), 0 0 10px rgba(14, 165, 233, 0.3);
+}
+
+form {
+	margin: 20px 0;
+}
+
+input[type="file"] {
+	margin: 10px 0;
+}
+
+/* Danh sách truyện */
+.novel-list {
+	margin-top: 30px;
+}
+
+.novel-list p {
+	font-weight: bold;
+}
+
+.novel-list a {
+	text-decoration: none;
+	color: #0c4a6e;
+	font-weight: bold;
+}
+
+/* Card truyện */
+.novel-card {
+	display: flex;
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 15px 0;
+	transition: box-shadow 0.3s;
+}
+
+.novel-card:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.novel-card img {
+	width: 130px;
+	height: 180px;
+	object-fit: cover;
+}
+
+.novel-info {
+	padding: 15px;
+	flex: 1;
+}
+
+.novel-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #111827;
+	margin-bottom: 5px;
+}
+
+.novel-author {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.novel-description {
+	font-size: 14px;
+	margin-bottom: 10px;
+	line-height: 1.5;
+	max-width: 650px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.novel-status {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.novel-status.approved {
+	color: #10b981;
+}
+
+.novel-status.pending {
+	color: #f59e0b;
+}
+
+.novel-status.rejected {
+	color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.avatar {
+		margin-bottom: 10px;
+	}
+
+	.novel-card {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.novel-card img {
+		width: 100%;
+		height: auto;
+	}
+
+	.novel-info {
+		padding: 10px;
+	}
+}
+
+/* Upload ảnh đại diện */
+.custom-file-label {
+	display: inline-block;
+	padding: 10px 18px;
+
+	color: #0c4a6e;
+	font-weight: 600;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+	transition: all 0.3s ease;
+	margin-top: 10px;
+}
+
+.custom-file-label:hover {
+	background: linear-gradient(135deg, #7dd3fc, #0ea5e9);
+	transform: scale(1.03);
+}
+
+#fileName {
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 14px;
+	color: #4b5563;
+	font-style: italic;
+	max-width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Nút tạo truyện mới */
+.create-btn {
+	display: inline-block;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0c4a6e;
+	background: linear-gradient(135deg, #a5f3fc, #38bdf8);
+	border: none;
+	border-radius: 8px;
+	text-decoration: none;
+	box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+	transition: all 0.3s ease;
+}
+
+.create-btn:hover {
+	background: linear-gradient(135deg, #7dd3fc, #0ea5e9);
+	transform: scale(1.05);
+	box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+}
+
+/* Tiêu đề danh sách */
+.section-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #0f172a;
+	position: relative;
+	padding-left: 32px;
+	margin-bottom: 10px;
+	animation: fadeInSlide 0.5s ease;
+}
+
+.section-title::before {
+	content: "📚";
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 18px;
+}
+
+@keyframes fadeInSlide {
+	0% {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Dòng khi chưa có truyện */
+.no-novels {
+	text-align: center;
+	margin-top: 40px;
+	padding: 15px;
+	font-size: 16px;
+	font-style: italic;
+	color: #64748b;
+	background: #f1f5f9;
+	border-radius: 8px;
+	animation: fadeInUp 0.6s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.btn-chapters:hover {
+	background-color: #009cb4;
+}
+.btn-chapters {
+	background-color: #00b4d8;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 2px;
+	display: inline-block;
+	transition: background 0.3s;
+}
+.right-btn {
+	text-align: right;
+	margin-top: 8px;
+}

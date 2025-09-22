@@ -1,0 +1,468 @@
+.from {
+	width: 100%;
+	max-width: 1500px;
+	height: 700px;
+}
+.dashboard-wrapper {
+	background: #fafbfc;
+	font-family: "Segoe UI", sans-serif;
+	display: flex;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+}
+#imglogo {
+	height: 60px;
+	width: auto;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+/* SIDEBAR */
+.sidebar1 {
+	align-content: center;
+	width: 600px;
+	background: #fff;
+	border-right: 1px solid #f0f1f4;
+	box-shadow: 2px 0 16px #e5e7eb1a;
+	padding: 30px 20px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #5068e1ff;
+	height: 560px;
+}
+.logoc {
+	font-weight: bold;
+	margin-top: -10px;
+	font-size: 30px;
+	margin-bottom: 36px;
+	line-height: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.ink-row {
+	display: flex;
+	align-items: center;
+	gap: 30px; /* Khoảng cách giữa INK và logo nhỏ */
+	margin-bottom: 10px; /* Cách ra so với chữ STONE bên dưới */
+	font-size: 36px; /* Cỡ chữ INK */
+}
+
+.logo-right {
+	width: 100px;
+	height: auto;
+	margin-left: 2px;
+	margin-top: 10px;
+	align-items: center;
+}
+
+.logoc span {
+	font-size: 18px;
+	letter-spacing: 3px;
+	color: #b0b4b7;
+	font-weight: 400;
+	margin-left: 2px;
+}
+
+.sidebar1 nav {
+	margin-top: -30px;
+	width: 200px;
+}
+.sidebar1 nav a {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 12px 12px;
+	color: #1e293b;
+	text-decoration: none;
+	border-radius: 14px;
+	font-size: 18px;
+	margin-bottom: 10px;
+	transition: background 0.2s, color 0.2s;
+	font-weight: 500;
+}
+.sidebar1 nav a.active,
+.sidebar1 nav a:hover {
+	background: #f1f5fd;
+	color: #325eff;
+}
+
+/* MAIN */
+.main-dashboard {
+	flex: 1;
+	padding: 34px 40px 0 40px;
+	background: #fafbfc;
+}
+
+/* HEADER SECTION - TAB */
+.header-section {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	margin-bottom: 24px;
+}
+.header-section h2 {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0;
+	color: #263653;
+	padding-bottom: 7px;
+	border-bottom: 2.5px solid transparent;
+	cursor: pointer;
+	transition: border-bottom 0.2s;
+}
+.header-section h2:first-child {
+	border-bottom: 2.5px solid #325eff; /* tab chọn */
+	color: #325eff;
+}
+.header-section h2:not(:first-child):hover {
+	border-bottom: 2.5px solid #b2bcff;
+}
+
+/* BANNER SECTION */
+.banner-section {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 36px;
+}
+
+.btn-join {
+	background: #325eff;
+	color: #fff;
+	border: none;
+	padding: 10px 32px;
+	border-radius: 8px;
+	margin-top: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: 600;
+	transition: background 0.2s;
+}
+.btn-join:hover {
+	background: #2541be;
+}
+
+/* NO BOOKS */
+.no-books {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 280px;
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px #dadbf33a;
+	border: 1.5px solid #eff1fa;
+	margin: 0;
+	padding: 40px 0;
+
+	margin-top: -40px;
+	width: 930px;
+	height: 420px;
+}
+.banner1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 13px;
+}
+.banner1 img {
+	width: 70px;
+	margin-bottom: 5px;
+}
+.no-books h3 {
+	font-size: 22px;
+	font-weight: 600;
+	margin: 14px 0 0 0;
+	color: #263653;
+}
+.red {
+	color: #f44444;
+	font-weight: bold;
+}
+.create-btn {
+	margin-top: 20px;
+	background: #325eff;
+	color: white;
+	padding: 11px 36px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 15px;
+	transition: background 0.2s;
+	letter-spacing: 0.5px;
+	box-shadow: 0 1px 4px #d3d9fd1a;
+	display: inline-block;
+}
+.create-btn:hover {
+	background: #2541be;
+}
+
+/* Modal overlay */
+/* ------- CSS cần thiết cho modal tạo truyện mới ------- */
+#createNovelModal.modal-overlay {
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(38, 43, 63, 0.33);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeInModal 0.2s;
+}
+#createNovelModal .login-modal {
+	background: #fff;
+	border-radius: 20px;
+	padding: 34px 32px 32px 32px;
+	min-width: 330px;
+	max-width: 450px;
+	box-shadow: 0 10px 32px #2a326449;
+	position: relative;
+	animation: fadeInUp 0.2s;
+	width: 100%;
+}
+
+/* Font hiện đại */
+body,
+.login-modal {
+	font-family: "Poppins", sans-serif;
+	background-color: #f0f2f5;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Overlay modal */
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	animation: fadeIn 0.3s ease;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Animation hiệu ứng overlay */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Modal content - có scroll nội dung */
+.login-modal {
+	background: #ffffff;
+	width: 100%;
+	max-width: 420px;
+	max-height: 90vh;
+	overflow-y: auto;
+	border-radius: 20px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+	padding: 30px 24px;
+	position: relative;
+	animation: slideUp 0.4s ease;
+	scrollbar-gutter: stable both-edges;
+}
+
+/* Slide-in animation */
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Scrollbar đẹp */
+.login-modal::-webkit-scrollbar {
+	width: 6px;
+}
+.login-modal::-webkit-scrollbar-track {
+	background: transparent;
+}
+.login-modal::-webkit-scrollbar-thumb {
+	background-color: #aaa;
+	border-radius: 10px;
+}
+
+/* Nút đóng */
+.close-btn {
+	position: absolute;
+	top: 16px;
+	right: 20px;
+	background: transparent;
+	border: none;
+	font-size: 24px;
+	color: #999;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+.close-btn:hover {
+	color: #e74c3c;
+}
+
+/* Tiêu đề */
+h2 {
+	font-size: 22px;
+	text-align: center;
+	color: #2c3e50;
+	margin-bottom: 20px;
+}
+
+/* Label & inputs */
+label {
+	display: block;
+	font-weight: 500;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 6px;
+	color: #444;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+	width: 90%;
+	padding: 12px 14px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: 15px;
+	margin-bottom: 16px;
+	background: #fafafa;
+	transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border-color: #6c63ff;
+	box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+	outline: none;
+}
+
+/* Nút submit */
+button[type="submit"] {
+	width: 100%;
+	padding: 13px;
+	background: linear-gradient(135deg, #6c63ff, #5c4dff);
+	color: #fff;
+	border: none;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 6px 14px rgba(108, 99, 255, 0.3);
+	transition: all 0.3s ease;
+}
+button[type="submit"]:hover {
+	background: linear-gradient(135deg, #4f46e5, #4338ca);
+	box-shadow: 0 8px 20px rgba(86, 78, 255, 0.35);
+}
+
+/* Dropdown tag */
+.dropdown-tag-label {
+	background: #f2f2f2;
+	padding: 12px 14px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 90%;
+	transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover cho dropdown tag */
+.dropdown-tag-label:hover {
+	background: #e0e0e0;
+	transform: translateY(-2px);
+}
+
+.dropdown-tag-list {
+	margin-top: 8px;
+	padding: 12px;
+	background: #fcfcfc;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	max-height: 120px;
+	overflow-y: auto;
+	animation: fadeInDropdown 0.4s ease;
+}
+
+/* Hiệu ứng fade-in cho dropdown list */
+@keyframes fadeInDropdown {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Scrollbar cho tag */
+.dropdown-tag-list::-webkit-scrollbar {
+	height: 4px;
+}
+.dropdown-tag-list::-webkit-scrollbar-thumb {
+	background-color: #bbb;
+	border-radius: 5px;
+}
+
+/* Tag item */
+.dropdown-tag-list label {
+	background: #ececec;
+	padding: 6px 10px;
+	border-radius: 8px;
+	margin: 4px 6px 4px 0;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.2s ease;
+	font-size: 13px;
+}
+
+.dropdown-tag-list label:hover {
+	background: #d9d9d9;
+	transform: translateY(-2px); /* Hiệu ứng đẩy lên khi hover */
+}
+
+/* Chỉnh hiệu ứng phần chọn thể loại (select) */
+select {
+	padding: 12px 14px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: 15px;
+	background-color: #fafafa;
+	width: 97%;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background: url('data:image/svg+xml;charset=UTF-8,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="none" d="M10 13L6 9h8z"%3E%3C/path%3E%3C/svg%3E')
+		no-repeat right 10px center;
+	background-size: 12px;
+	background-color: #fafafa;
+}
+
+/* Hiệu ứng khi focus vào select */
+select:focus {
+	border-color: #6c63ff;
+	box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+	outline: none;
+}
