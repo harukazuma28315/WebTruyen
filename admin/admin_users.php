@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['level'] != 1) {
     exit();
 }
 
-// Thêm user (dành cho admin muốn tạo mới nhanh)
+// Thêm user (dành cho admin muốn tạo mới nhanh)jhdxcfbskd
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
