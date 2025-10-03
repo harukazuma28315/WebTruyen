@@ -30,37 +30,48 @@ body {
 	margin-top: 10px;
 }
 .header {
-	/* display: inline-block; */
 	position: fixed;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	flex-wrap: nowrap; /* Không cho xuống hàng */
-	padding: 0px 20px 0px 20px;
+	justify-content: flex-start; /* căn toàn bộ sang trái */
+	flex-wrap: nowrap;
+	padding: 0px 20px;
 	height: 75px;
 	width: 1160px;
 	color: white;
 	top: 0;
-	margin: 0px 0px 20px 0px;
+	margin: 0 0 20px 0;
 	z-index: 999;
 	max-width: 1200px;
 	background-color: #f6f7fc;
 }
 
+/* Logo luôn bên trái */
 #imglogo {
 	height: 60px;
 	width: auto;
-	margin-right: -10px;
 	margin-left: 30px;
+	margin-right: 20px;
 }
 
+/* Navbar dính sát bên trái */
 .navbar {
 	display: flex;
 	gap: 16px;
-	flex: 0 0 auto;
-	margin-left: 20px;
-	white-space: nowrap;
+	margin-left: 0;  /* bỏ khoảng cách thừa */
+	flex: 1;         /* chiếm toàn bộ không gian giữa */
 }
+
+/* Phần bên phải (login, search, ...) vẫn giữ nguyên */
+.header-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex: 0 0 auto;
+	margin-left: auto;   /* đẩy hẳn sang bên phải */
+	gap: 20px;           /* khoảng cách giữa các phần tử bên trong */
+}
+
 
 .navbar a {
 	font-size: 20px;
@@ -69,12 +80,8 @@ body {
 	font-weight: bold;
 	transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 .search-bar input {
-	padding: 5px 20px;
-	width: 170px;
-	border-radius: 20px 0 0 20px;
-	outline: none;
+	
 	margin: 0 20px;
 	margin-top: 4px;
 	margin-right: 60px;
@@ -84,19 +91,14 @@ body {
 
 	background-color: #006f8a;
 	color: white;
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 50px 50px 50px;
 	cursor: pointer;
-	margin: 0 25px;
-	margin-top: 4px;
+	margin: 0 30px;
+	height: 40px;
 	margin-left: -60px;
 }
 
-.header-right {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	margin-left: -50px;
-}
+
 
 #dangnhap {
 	display: flex;

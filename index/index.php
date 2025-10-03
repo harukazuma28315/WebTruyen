@@ -193,14 +193,23 @@ foreach ($truyen_cap_nhat as &$novel) {
              <a href="../novels/create.php" target="_blank"><i class="fa fa-pen"></i> Tạo Mới</a>
             
             <a href="../novels/library.php"><i class="fa fa-book"></i> Thư Viện</a>
+            <a href="../novels/buybooks.php"><i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng</a>
         </div>
         <div class="header-right">
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Tìm kiếm...">
-                <button id="search-btn"><i class="fa fa-search"></i></button>
-                 <ul id="search-results"></ul>
-            </div>
-            <ul id="search-results"></ul>
+          <!--sửa tìm kiếm-->
+            <div class="search-wrapper">
+    <button id="search-toggle" class="search-icon">
+        <i class="fa fa-search"></i>
+    </button>
+
+    <div class="search-bar" id="search-bar">
+        <input type="text" id="search-input" placeholder="Tìm kiếm truyện...">
+        <button id="close-search" class="close-btn"><i class="fa fa-times"></i></button>
+        <ul id="search-results"></ul>
+    </div>
+</div>
+
+            <!--sửa tìm kiếm-->
             <div id="dangnhap">
   <?php include_once '../components/user_avatar_button.php'; ?>
 </div>
